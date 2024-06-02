@@ -1,1 +1,106 @@
+body {
+    font-family: 'Arial', snas-self;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: orange;
+    text-shadow: 2px 2bx 4px black(0, 0, 0, 0.7);
+    background-size: cover;
+    background-position: center;
+}
+
+#clock {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#login-form input {
+    padding: 10px;
+    margin:5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#login-form input[type="submit"] {
+    background-color: beige;
+    color: black;
+    cursor: pointer;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: green;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#greeting {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#todo-form input {
+    padding:10px;
+    border: none;
+    border-radius:5px;
+    margin-right:10px;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#todo-list li button {
+    background: none;
+    border: none;
+    color: blue;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+#quote, #weather {
+    margin: 20px;
+    text-align: center;
+}
+
+#quote span first-child {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#quote span:last-child {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#weather span:first-child {
+    display: block;
+    font-size: 25px;
+}
+
+#weather span last-child {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 
