@@ -1,13 +1,13 @@
 const weather = document.querySelector("#weather span:first-child");
 const city = document.querySelector("#weather span:last-child");
 
-const API_KEY = "29af5ba276875c619274b4c7e7698c97";
+const API_KEY = "647345a6a06f7fa3d73227ea7c48bca1";
 
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -17,7 +17,7 @@ function onGeoOk(position) {
 }
 
 function onGeoError() {
-  alert("Can't find you. No weather for you.");
+  alert("Can't find you.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
