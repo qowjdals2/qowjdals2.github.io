@@ -13,25 +13,25 @@ body {
 }
 
 #clock {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 22px;
 }
 
 #login-form input {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 11px;
+    margin: 7px;
+    border-radius: 7px;
     border: none;
 }
 
 #login-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: orange;
+    color: black;
     cursor: pointer;
 }
 
 #login-form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: orange;
 }
 
 #login-form {
@@ -45,14 +45,14 @@ body {
 }
 
 #greeting {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 20px;
 }
 
 #todo-form input {
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     margin-right: 10px;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 #todo-list li {
-    padding: 10px;
+    padding: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
@@ -73,7 +73,7 @@ body {
     background: none;
     border: none;
     color: blude;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
 }
 
@@ -84,7 +84,7 @@ body {
 
 #quote span:first-child {
     display: block;
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -95,7 +95,7 @@ body {
 
 #weather span:first-child {
     display: block;
-    font-size: 24px;
+    font-size: 25px;
 }
 
 #weather span:last-child {
