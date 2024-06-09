@@ -1,37 +1,31 @@
 const loginForm = document.querySelector("#login-form");
-const loginInput = loginForm.querySelector("input");
+const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
-const ellipsisForm = document.querySelector("#ellipsis-form");
-const ellipsis = ellipsisForm.querySelector("input");
-const renameBtn = document.querySelector("#renameBtn");
-const savedUserName = localStorage.getItem("username");
 
-// localStorage username 검사
-if (savedUserName === null) {
-  loginForm.classList.remove("hidden");
-  loginForm.addEventListener("submit", logInSubmit);
-} else {
-  greetings(savedUserName);
-}
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-// login
-function logInSubmit(event) {
-  event.preventDefault();
+function onLoginSubmit(event) {
+  event.preventDefault(); // 폼 제출의 기본 동작을 막습니다 (페이지 새로고침 방지).
   const username = loginInput.value;
-  localStorage.setItem("username", username);
-  loginForm.classList.add("hidden");
-  greetings(username);
+  localStorage.setItem(USERNAME_KEY, username);
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  paintGreetings(username);
 }
 
-function showModifyUsername(event) {
-  renameBtn.classList.toggle("hidden");
+function paintGreetings(username) {
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
-function modifyUsername(event) {
-  event.preventDefault();
-  greeting.classList.add("hidden");
-  ellipsisForm.classList.add("hidden");
-  renameBtn.classList.add("hidden");
-  loginForm.classList.remove("hidden");
-  loginForm.addEventListener("submit", logInSubmit);
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+  // 저장된 이름이 없으면 로그인 폼을 보여줍니다.
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  // 저장된 이름이 있으면 환영 메시지를 보여줍니다.
+  loginForm.classList.add(HIDDEN_CLASSNAME);
+  paintGreetings(savedUsername);
 }
