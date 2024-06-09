@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
 
-    <title>JS final challenge</title>
-  <body>
-    <div class="main-content">
-      
-      <h1 id="clock">00:00:00</h1>
-      <form class="hidden" id="login-form">
-        <input required maxlength="20" type="text" placeholder="What is your name?" />
-      </form>
-     
-      <div class="greetings">
-        <h1 class="hidden" id="greeting"></h1>
-        <!-- ellipsis -->
-        <form class="hidden"  id="ellipsis-form">
-            <input type="button"  id="ellipsis"> 
-            <label for="ellipsis" ><i class="fas fa-ellipsis-h"></i></label>
-        </form>
-        <form class="hidden" id="renameBtn">
-            <input type="submit" value="rename?" />
-        </form>
-      </div>
-      
-      <div class="todo">
-        <form  id="todo-form">
-          <input type="text" placeholder="What are your plans for today?">
-        </form>
-        <ul id="todo-list">
-        </ul>
-      </div>
+<html lang="en">
+    <head>
+      <meata charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/style.css">
+      <title>JS final challenge</title>
+    </head>
+
+  <body style="background-image: url("img/1.jpg");"></body>
+    <h2 id="clock">00:00:00</h2>
+    <form id="login-form">
+      <input reqired maxlength="15" type="text" placeholder="What is your name?">
+      <input type="submit" value="Log in">
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+      <span></span>
+      <span></span>
     </div>
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
-    <script src="js/quotes.js"></script>
+    
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="js/greeting.js"</script>
+    <script src="js/clock.js"</script>
+    <script src="js/weather.js"</script>
+    <script src="js/todo.js"</script>
+    <script src="js/quotes.js"</script>
   </body>
 </html>
+    
+  
