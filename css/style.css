@@ -224,3 +224,6 @@ label {
   box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
   animation: float 0.5s ease-in-out infinite forwards;
 }
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 16px 0px;
+  animation: float 0.5s ease-in-out infinite forwards;
+}
